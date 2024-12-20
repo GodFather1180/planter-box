@@ -1,0 +1,253 @@
+body {
+    height: 100vh;
+    margin: 0;  
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;  
+    align-items: center;  
+    background: linear-gradient(142deg, 
+        #45d1aa 20%, 
+        #964fc5 50%, 
+        #21259e 80%);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+
+#Title {
+    font-family: 'Mountains of Christmas', sans-serif; 
+    font-size: 45px;                 
+    color: #a3217c;                     
+    
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;  
+    width: 60%;  
+    margin-top: 100px; 
+    
+}
+
+
+.button-with-text {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+}
+
+
+#Water {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: url('https://i.ibb.co/5M9SNcG/tap.png'); 
+    background-size: 100px 100px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 150px; 
+    height: 150px; 
+    text-indent: -9999px;
+   
+}
+
+#Water-text {
+    font-family: 'Lato', sans-serif; 
+    font-size: 20px; 
+    color: #ffffff; 
+}
+
+#Shade-text{
+    font-family: 'Lato', sans-serif; 
+    font-size: 20px; 
+    color: #ffffff; 
+
+}
+
+#Humidity-text {
+
+    font-family: 'Lato', sans-serif; 
+    font-size: 25px; 
+    color: #ffffff;
+    text-align: center;
+    margin-top: 150px;
+
+
+}
+#Shade {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: url('https://i.ibb.co/RNXVTMZ/image.png'); 
+    background-size: 100px 100px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 150px; 
+    height: 150px; 
+    text-indent: -9999px;
+}
+
+#Water:hover  {
+    background-color: darkred;
+}
+
+#Shade:hover {
+    background-color: darkred;
+}
+.box1 {
+    background-color: #000;
+    color: #fff;
+    opacity: 0.5;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    text-align: center;   
+    
+  }
+
+.box2 {
+    background-color: #ffffff;
+    width:99%;
+    height: 1px;
+
+
+  }
+ 
+
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.title-container {
+    display: flex;               
+    align-items: center;          
+    justify-content: center; 
+    width: 100%;                  
+    margin-top: 0px;        
+}
+#title-image {
+    width: 70px;                
+    height: 70px;                
+    object-fit: contain;       
+}
+
+
+/* Threshold */
+
+.threshold-container {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+}
+
+.threshold-container label {
+    font-size: 18px;
+}
+
+.threshold-container input {
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.threshold-container button {
+    background-color: #2c73dd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.threshold-container button:hover {
+    background-color: #4f7ccf;
+}
+
+#threshold-display {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* menu for moisture */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.close-button {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* water timer */
+
+.timer-container {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+}
+
+.timer-container label {
+    font-size: 18px;
+}
+
+.timer-container select {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

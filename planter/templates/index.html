@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Testing </title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"">
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body style="background-color: rgb(81, 137, 219);">
+
+<div class="title-container">
+
+    <h1 id="Title" style="color:rgb(255, 255, 255)"> Garden Controls</h1>
+    <img src="https://png.pngtree.com/png-vector/20220719/ourmid/pngtree-green-leaf-icon-vector-png-image_6005736.png" alt="Garden Controls Logo" id="title-image">
+</div>
+
+
+
+<div class ="box box2">.</div>
+
+
+
+<p id="Humidity-text">Current Moisture Levels:50%</p> 
+
+
+
+<div class="button-container">
+    <div class="button-with-text">
+        <button id="Water" onclick="toggleWater()">Water</button>
+        <p id="Water-text">Water is off</p>
+    </div>
+    <div class="button-with-text">
+        <button id="Shade" onclick="toggleShade()">Shade</button>
+        <p id="Shade-text">Shade is off</p>
+    </div>
+</div>
+
+<div class="timer-container">
+    <label for="timer-select">Set Water Timer:</label>
+    <select id="timer-select">
+        <option value="0">No Timer</option>
+        <option value="1">1 Minute</option>
+        <option value="5">5 Minutes</option>
+        <option value="10">10 Minutes</option>
+    </select>
+</div>
+
+
+
+<div class="threshold-container">
+    <label for="moisture-threshold">Set Moisture Threshold (%):</label>
+    <input type="number" id="moisture-threshold" min="0" max="100" value="50">
+    <button onclick="updateThreshold()">Set Threshold</button>
+    <p id="threshold-display">Current Threshold: 50%</p>
+</div>
+
+<div id="moisture-chart-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close-button">&times;</span>
+        <h2>Moisture Levels for Common Garden Plants</h2>
+        <table>
+            <tr>
+                <th>Plant Type</th>
+                <th>Moisture Level (%)</th>
+            </tr>
+            <tr>
+                <td>Vegetables (e.g., Tomatoes, Peppers)</td>
+                <td>50-70%</td>
+            </tr>
+            <tr>
+                <td>Herbs (e.g., Parsley, Basil)</td>
+                <td>40-60%</td>
+            </tr>
+            <tr>
+                <td>Fruits (e.g., Strawberries, Melons)</td>
+                <td>60-80%</td>
+            </tr>
+            <tr>
+                <td>Flowering Plants (e.g., Roses, Petunias)</td>
+                <td>40-60%</td>
+            </tr>
+            <tr>
+                <td>Grass</td>
+                <td>30-50%</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="box box1">Website made by KK for ENSC 100W Automated Gardening Project 2024</div>
+
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+
+</body>
+
+
+</html>

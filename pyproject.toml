@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "planter"
+version = "0.1.0"
+description = ""
+authors = ["dll8@sfu.ca"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+adafruit-circuitpython-motorkit = "^1.6.15"
+rpi-gpio = "^0.7.1"
+explorerhat = "^0.5.1"
+smbus = "^1.1.post2"
+flask = "^3.1.0"
+apscheduler = "^3.11.0"
+gunicorn = "^23.0.0"
+jsonschema = "^4.23.0"
+flask-apscheduler = "^1.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
